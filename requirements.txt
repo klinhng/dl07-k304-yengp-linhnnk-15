@@ -3,6 +3,12 @@ numpy
 pandas
 matplotlib
 seaborn
-scikit-learn
 wordcloud
+underthesea
+scikit-learn
 openpyxl
+xgboost
+joblib
+tqdm
+requests
+plotly
