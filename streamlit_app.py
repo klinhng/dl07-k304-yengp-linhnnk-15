@@ -1712,6 +1712,7 @@ elif menu_selection == "New Prediction":
                     care = st.slider("Sự quan tâm từ quản lý", 1, 5, 3)
                     culture = st.slider("Văn hóa & giải trí", 1, 5, 3)
                     office = st.slider("Văn phòng & không gian làm việc", 1, 5, 3)
+                    recommend = st.radio("Bạn có recommend công ty này không?", ["Có", "Không"])
                 
                     st.markdown("---")
                     st.markdown("##### 🎯 Dự đoán Recommend theo đánh giá chi tiết")
@@ -1770,7 +1771,7 @@ elif menu_selection == "New Prediction":
                                         f"{rating}/5", recommend, pred_xgb.upper()]
                         })
                     st.dataframe(summary_df, use_container_width=True)
-        
+
             elif input_method == "📁 Tải file Excel":
                 st.markdown("#### 📁 Tải file Excel để phân tích hàng loạt")
                 st.info("""
