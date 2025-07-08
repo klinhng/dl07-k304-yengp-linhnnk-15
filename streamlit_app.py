@@ -1712,7 +1712,6 @@ elif menu_selection == "New Prediction":
                     care = st.slider("Sự quan tâm từ quản lý", 1, 5, 3)
                     culture = st.slider("Văn hóa & giải trí", 1, 5, 3)
                     office = st.slider("Văn phòng & không gian làm việc", 1, 5, 3)
-                    recommend = st.selectbox("Có recommend không?", ["Có", "Không"])
                 
                     st.markdown("---")
                     st.markdown("##### 🎯 Dự đoán Recommend theo đánh giá chi tiết")
