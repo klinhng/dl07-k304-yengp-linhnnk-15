@@ -1795,6 +1795,7 @@ elif menu_selection == "New Prediction":
                                 combined_col = df_new["What I liked"].fillna("") + " " + df_new["Suggestions for improvement"].fillna("")
                                 X_new = vectorizer.transform(combined_col.astype(str))
                                 df_new["Sentiment"] = label_encoder.inverse_transform(xgb_model.predict(X_new))
+                                df_new["Sentiment"] = df_new["Sentiment"].str.capitalize()
                                 
                             
                                 st.success("✅ Phân tích hoàn thành!")
