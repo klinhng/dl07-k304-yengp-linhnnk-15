@@ -1742,6 +1742,7 @@ elif menu_selection == "New Prediction":
                     with st.spinner("Đang phân tích..."):
                         X_input = vectorizer.transform([combined_text])
                         pred_xgb = label_encoder.inverse_transform(xgb_model.predict(X_input))[0]
+                        st.write("👉 Nhãn dự đoán model trả về:", pred_xgb)
 
                     
                         st.markdown("---")
@@ -1793,7 +1794,7 @@ elif menu_selection == "New Prediction":
                                 combined_col = df_new["What I liked"].fillna("") + " " + df_new["Suggestions for improvement"].fillna("")
                                 X_new = vectorizer.transform(combined_col.astype(str))
                                 df_new["Sentiment"] = label_encoder.inverse_transform(xgb_model.predict(X_new))
-                                df_new["Sentiment"] = df_new["Sentiment"].str.strip().str.capitalize()
+                                
                             
                                 st.success("✅ Phân tích hoàn thành!")
                             
